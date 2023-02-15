@@ -1,22 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import AtomTextComponent from './core/@atoms/AtomText';
+import { StatusBar } from "expo-status-bar";
+import React from "react";
+import { AtomText } from "./build";
+import AtomWrapperComponet from "./core/@atoms/AtomWrapper";
+import AtomTextComponet from "./core/@atoms/AtomText";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <AtomTextComponent textTest="Hello World" />
-      <StatusBar style="auto" />
-    </View>
+    <AtomWrapperComponet>
+      <StatusBar style="light" />
+      <AtomText />
+    </AtomWrapperComponet>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

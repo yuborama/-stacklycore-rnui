@@ -1,12 +1,21 @@
 {
   "name": "@stacklycore/rnui",
   "version": "1.0.0",
-  "main": "node_modules/expo/AppEntry.js",
+  "main": "build/index.js",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "build"
+  ],
+  "types": "./build/bulid/main.d.ts",
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
+    "start": "expo start --dev-client",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "build": "rollup -c"
   },
   "dependencies": {
     "expo": "~47.0.12",
@@ -14,7 +23,8 @@
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-native": "0.70.5",
-    "react-native-web": "~0.18.9"
+    "react-native-web": "~0.18.9",
+    "expo-splash-screen": "~0.17.5"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -25,6 +35,7 @@
     "@rollup/plugin-typescript": "^11.0.0",
     "@types/react": "~18.0.14",
     "@types/react-native": "~0.70.6",
+    "rollup": "^3.15.0",
     "typescript": "^4.6.3"
   },
   "private": true
