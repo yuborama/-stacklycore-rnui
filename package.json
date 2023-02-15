@@ -1,6 +1,6 @@
 {
   "name": "@stacklycore/rnui",
-  "version": "1.0.0",
+  "version": "0.0.0",
   "main": "build/index.js",
   "publishConfig": {
     "access": "public",
@@ -15,7 +15,8 @@
     "android": "expo run:android",
     "ios": "expo run:ios",
     "web": "expo start --web",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "test": "rimraf build & rollup -c"
   },
   "dependencies": {
     "expo": "~47.0.12",
